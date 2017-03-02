@@ -1,1 +1,25 @@
-test somnath
+cURL - A command line tool for getting or sending files using URL syntax. Here code for Beginner 
+
+<?php
+        $Url =  "http://www.stepin-solutions.com/";
+        $sCurlHandler = curl_init();
+        curl_setopt($sCurlHandler, CURLOPT_URL,$Url);
+        curl_setopt($sCurlHandler,CURLOPT_RETURNTRANSFER,true);
+        $result = curl_exec($sCurlHandler);
+        curl_close($sCurlHandler);
+        
+        print $result;
+        
+?>
+
+=> In first line variable $Url =  "http://www.stepin-solutions.com/"; is url from where you send or get data.
+
+=> curl_init(); this will Initialize a curl session
+
+=> If you set CURLOPT_RETURNTRANSFER to true or 1 then the return value from curl_exec will be the actual result from the successful operation. In other words it will not return TRUE on success. Although it will return FALSE on failure
+
+=> curl_exec($sCurlHandler); will store result in $result and you print result after close it.
+
+=> When you pass value in your request then write blow code:
+
+
